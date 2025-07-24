@@ -1,0 +1,8 @@
+base\BaseTest.class
+pages\LoginPage.class
+tests\UpdateUserTest.class
+tests\RegisterUserTest.class
+tests\FirstTest.class
+tests\LoginTest.class
+pages\RegisterUserPage.class
+utils\ExtentManager.class

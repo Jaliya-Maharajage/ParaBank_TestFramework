@@ -1,0 +1,69 @@
+package tests;
+
+import java.util.regex.Pattern;
+
+import org.testng.annotations.Test;
+
+import com.microsoft.playwright.Locator;
+import com.microsoft.playwright.Page;
+import com.microsoft.playwright.options.AriaRole;
+
+import base.BaseTest;
+
+public class QaUserCreation extends BaseTest {
+	
+	@Test
+	 public void test() {
+		 page.navigate("https://samplecompanybyjay.qatouch.com/login");
+		    page.getByPlaceholder("Email Address", new Page.GetByPlaceholderOptions().setExact(true)).click();
+		    page.getByPlaceholder("Email Address", new Page.GetByPlaceholderOptions().setExact(true)).fill("mjaliya.jay@gmail.com");
+		    page.getByPlaceholder("Password").click();
+		    page.getByPlaceholder("Password").fill("$andyaFernando181");
+		    page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("Log in")).click();
+		    page.locator(".top_menu_icons_outer_wrap").first().click();
+		    page.getByRole(AriaRole.TEXTBOX, new Page.GetByRoleOptions().setName("Project Name")).click();
+		    page.getByRole(AriaRole.TEXTBOX, new Page.GetByRoleOptions().setName("Project Name")).fill("second sample project");
+		    page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("Save")).click();
+		    page.locator("#show-btn").click();
+		    page.getByRole(AriaRole.TEXTBOX, new Page.GetByRoleOptions().setName("First Name")).click();
+		    page.getByRole(AriaRole.TEXTBOX, new Page.GetByRoleOptions().setName("First Name")).fill("iorn");
+		    page.getByRole(AriaRole.TEXTBOX, new Page.GetByRoleOptions().setName("Last Name")).click();
+		    page.getByRole(AriaRole.TEXTBOX, new Page.GetByRoleOptions().setName("Last Name")).fill("man");
+		    page.getByRole(AriaRole.TEXTBOX, new Page.GetByRoleOptions().setName("Email")).click();
+		    page.getByRole(AriaRole.TEXTBOX, new Page.GetByRoleOptions().setName("Email")).fill("mjaliya.jay+1212@gmail.com");
+		    page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("Save")).click();
+		    page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("Stay Here")).click();
+		    page.getByRole(AriaRole.LINK, new Page.GetByRoleOptions().setName("Administration")).click();
+		    page.getByRole(AriaRole.SEARCHBOX, new Page.GetByRoleOptions().setName("Search By Name/Email")).click();
+		    page.getByRole(AriaRole.SEARCHBOX, new Page.GetByRoleOptions().setName("Search By Name/Email")).fill("iorn");
+		    page.locator(".user_management_action_outer_wrap > a:nth-child(2)").click();
+		    page.getByRole(AriaRole.TEXTBOX, new Page.GetByRoleOptions().setName("First Name")).click();
+		    page.getByRole(AriaRole.TEXTBOX, new Page.GetByRoleOptions().setName("First Name")).fill("ant");
+		    page.getByRole(AriaRole.TEXTBOX, new Page.GetByRoleOptions().setName("Last Name")).click();
+		    page.getByRole(AriaRole.TEXTBOX, new Page.GetByRoleOptions().setName("Last Name")).fill("boy");
+		    page.getByRole(AriaRole.TEXTBOX, new Page.GetByRoleOptions().setName("Email")).click();
+		    page.getByRole(AriaRole.TEXTBOX, new Page.GetByRoleOptions().setName("Email")).press("ArrowLeft");
+		    page.getByRole(AriaRole.TEXTBOX, new Page.GetByRoleOptions().setName("Email")).press("ArrowLeft");
+		    page.getByRole(AriaRole.TEXTBOX, new Page.GetByRoleOptions().setName("Email")).fill("mjaliya.jay+999@gmail.com");
+		    page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("Update")).click();
+		    page.getByRole(AriaRole.LINK, new Page.GetByRoleOptions().setName("Administration")).click();
+		    page.getByRole(AriaRole.SEARCHBOX, new Page.GetByRoleOptions().setName("Search By Name/Email")).click();
+		    page.getByRole(AriaRole.SEARCHBOX, new Page.GetByRoleOptions().setName("Search By Name/Email")).fill("ant");
+		    page.locator(".user_management_action_outer_wrap > a:nth-child(3)").click();
+		    page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("Delete")).click();
+		    page.locator("#projectsList").click();
+		    page.locator(".project_bottom_layer_left_wrap > div:nth-child(3) > a").first().click();
+		    page.getByRole(AriaRole.TEXTBOX, new Page.GetByRoleOptions().setName("Enter Project Name...")).click();
+		    page.getByRole(AriaRole.TEXTBOX, new Page.GetByRoleOptions().setName("Enter Project Name...")).fill("BestEverProject");
+		    page.locator("#project_desc").click();
+		    page.locator("#project_desc").fill("This Project is the Best!!!");
+		    page.getByRole(AriaRole.TEXTBOX, new Page.GetByRoleOptions().setName("Project URL")).click();
+		    page.getByRole(AriaRole.TEXTBOX, new Page.GetByRoleOptions().setName("Project URL")).fill("www.google.com");
+		    page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("Update")).click();
+		    page.locator("div:nth-child(4) > a").first().click();
+		    page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("Delete")).click();
+		    page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("")).click();
+		    page.getByRole(AriaRole.LINK, new Page.GetByRoleOptions().setName("Log out")).click();
+	  }
+
+}

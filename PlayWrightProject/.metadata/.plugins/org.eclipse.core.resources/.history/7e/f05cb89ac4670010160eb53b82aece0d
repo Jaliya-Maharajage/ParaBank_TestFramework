@@ -1,0 +1,10 @@
+<suite name="PlaywrightSuite">
+	<test name="BasicTests">
+		<classes>
+			<class name="tests.FirstTest" />
+			<class name="tests.QaUserCreation" />
+			<!--<class name="tests.RegisterUserTest" />
+			<class name="tests.LoginTest" />-->
+		</classes>
+	</test>
+</suite>

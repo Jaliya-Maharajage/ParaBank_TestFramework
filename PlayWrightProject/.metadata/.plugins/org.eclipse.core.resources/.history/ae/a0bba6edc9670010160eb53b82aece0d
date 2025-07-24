@@ -1,0 +1,31 @@
+package tests;
+
+import org.testng.annotations.Test;
+
+import com.microsoft.playwright.Page;
+import com.microsoft.playwright.options.AriaRole;
+
+import base.BaseTest;
+
+public class RegisterUserTest extends BaseTest {
+	@Test
+	public void test() {
+		page.navigate("https://parabank.parasoft.com/parabank/index.htm");
+		// page.setArgs(java.util.Arrays.asList("--start-maximized"));
+		page.getByRole(AriaRole.LINK, new Page.GetByRoleOptions().setName("Register")).click();
+		page.locator("[id=\"customer.firstName\"]").fill("Jaliya");
+		page.locator("[id=\"customer.lastName\"]").fill("Maharajage");
+		page.locator("[id=\"customer.address.street\"]").fill("181, piliyandala road, piliyandala");
+		page.locator("[id=\"customer.address.city\"]").fill("piliyandala");
+		page.locator("[id=\"customer.address.state\"]").fill("colombo");
+		page.locator("[id=\"customer.address.zipCode\"]").fill("10300");
+		page.locator("[id=\"customer.phoneNumber\"]").fill("+94761609095");
+		page.locator("[id=\"customer.ssn\"]").fill("123123123");
+		page.locator("[id=\"customer.username\"]").fill("jaliya_maharajage154");
+		page.locator("[id=\"customer.password\"]").fill("PassworD.181");
+		page.locator("#repeatedPassword").fill("PassworD.181");
+		page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("Register")).click();
+		page.getByRole(AriaRole.LINK, new Page.GetByRoleOptions().setName("Log Out")).click();
+	}
+
+}

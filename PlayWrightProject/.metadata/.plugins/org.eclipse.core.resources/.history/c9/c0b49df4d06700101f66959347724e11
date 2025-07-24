@@ -1,0 +1,48 @@
+package tests;
+
+import org.testng.annotations.Test;
+
+import com.microsoft.playwright.Page;
+import com.microsoft.playwright.options.AriaRole;
+import static com.microsoft.playwright.assertions.PlaywrightAssertions.assertThat;
+import base.BaseTest;
+
+public class LoginTest extends BaseTest {
+
+	@Test
+	public void test() {
+		page.navigate("https://parabank.parasoft.com/parabank/index.htm");
+		page.locator("input[name=\"username\"]").click();
+		page.locator("input[name=\"username\"]").fill("wrongname");
+		page.locator("input[name=\"password\"]").click();
+		page.locator("input[name=\"password\"]").fill("badbad");
+		page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("Log In")).click();
+		
+	
+		String pageTitle = page.title();
+		String expectedText = "Error!";
+        if (pageTitle.contains(expectedText)) {
+            System.out.println("Page title contains: " + expectedText);
+            // You can also use Playwright assertions for a more robust test
+            assertThat(page).hasTitle(expectedText); // This checks for exact match, not contains
+            // For contains, you would use a regex with hasTitle or a custom assertion
+            assertThat(page).hasTitle(java.util.regex.Pattern.compile(".*" + expectedText + ".*"));
+        } else {
+            System.out.println("Page title does NOT contain: " + expectedText);
+        }
+        
+		page.locator("input[name=\"username\"]").click();
+		page.locator("input[name=\"username\"]").fill("usernameonly");
+		page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("Log In")).click();
+		page.locator("input[name=\"password\"]").click();
+		page.locator("input[name=\"password\"]").fill("passwordonly");
+		page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("Log In")).click();
+		page.locator("input[name=\"username\"]").click();
+		page.locator("input[name=\"username\"]").fill("jaliya_maharajage5555");
+		page.locator("input[name=\"password\"]").click();
+		page.locator("input[name=\"password\"]").fill("PassworD.181");
+		page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("Log In")).click();
+		
+	}
+
+}

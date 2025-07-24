@@ -1,0 +1,71 @@
+package tests;
+
+import java.util.regex.Pattern;
+
+import org.testng.annotations.Test;
+
+import com.microsoft.playwright.Locator;
+import com.microsoft.playwright.Page;
+import com.microsoft.playwright.options.AriaRole;
+
+import base.BaseTest;
+
+public class QaUserCreation extends BaseTest {
+	
+	@Test
+	 public void test() {
+	    page.navigate("https://samplecompanybyjay.qatouch.com/login");
+	    page.getByPlaceholder("Email Address", new Page.GetByPlaceholderOptions().setExact(true)).click();
+	    page.getByPlaceholder("Email Address", new Page.GetByPlaceholderOptions().setExact(true)).fill("mjaliya.jay@gmail.com");
+	    page.getByPlaceholder("Password").click();
+	    page.getByPlaceholder("Password").fill("$andyaFernando181");
+	    page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("Log in")).click();
+	    page.getByRole(AriaRole.LINK, new Page.GetByRoleOptions().setName("Administration")).click();
+	    page.locator("a").filter(new Locator.FilterOptions().setHasText("Add User")).click();
+	    page.getByRole(AriaRole.TEXTBOX, new Page.GetByRoleOptions().setName("First Name")).click();
+	    page.getByRole(AriaRole.TEXTBOX, new Page.GetByRoleOptions().setName("First Name")).click();
+	    page.getByRole(AriaRole.TEXTBOX, new Page.GetByRoleOptions().setName("First Name")).fill("john");
+	    page.getByRole(AriaRole.TEXTBOX, new Page.GetByRoleOptions().setName("Last Name")).click();
+	    page.getByRole(AriaRole.TEXTBOX, new Page.GetByRoleOptions().setName("Last Name")).fill("cena");
+	    page.getByRole(AriaRole.TEXTBOX, new Page.GetByRoleOptions().setName("Email")).click();
+	    page.getByRole(AriaRole.TEXTBOX, new Page.GetByRoleOptions().setName("Email")).fill("mjaliya.jay+123@gmail.com");
+	    page.locator("a").filter(new Locator.FilterOptions().setHasText("Tester")).click();
+	    page.locator("div").filter(new Locator.FilterOptions().setHasText(Pattern.compile("^TesterDeveloper$"))).getByRole(AriaRole.TEXTBOX).fill("tester");
+	    page.getByRole(AriaRole.EMPHASIS).click();
+	    page.locator("a").filter(new Locator.FilterOptions().setHasText("QA/Project Manager")).click();
+	    page.getByRole(AriaRole.LISTITEM).filter(new Locator.FilterOptions().setHasText(Pattern.compile("^Software Engineer$"))).click();
+	    page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("Save")).click();
+	    page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("Stay Here")).click();
+	    page.locator("a").filter(new Locator.FilterOptions().setHasText("Project List")).click();
+	    page.locator("a").filter(new Locator.FilterOptions().setHasText("Add Project")).click();
+	    page.getByRole(AriaRole.TEXTBOX, new Page.GetByRoleOptions().setName("Project Name")).click();
+	    page.getByRole(AriaRole.TEXTBOX, new Page.GetByRoleOptions().setName("Project Name")).fill("Sample Project 101");
+	    page.locator("#sample_data").selectOption("6");
+	    page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("Save")).click();
+	    page.getByRole(AriaRole.LINK, new Page.GetByRoleOptions().setName("Administration")).click();
+	    page.getByRole(AriaRole.SEARCHBOX, new Page.GetByRoleOptions().setName("Search By Name/Email")).click();
+	    page.getByRole(AriaRole.SEARCHBOX, new Page.GetByRoleOptions().setName("Search By Name/Email")).fill("john");
+	    page.locator(".user_management_action_outer_wrap > a:nth-child(2)").click();
+	    page.getByRole(AriaRole.TEXTBOX, new Page.GetByRoleOptions().setName("Last Name")).click();
+	    page.getByRole(AriaRole.TEXTBOX, new Page.GetByRoleOptions().setName("Last Name")).fill("wayne");
+	    page.locator("a").filter(new Locator.FilterOptions().setHasText("Tester")).click();
+	    page.getByRole(AriaRole.LISTITEM).filter(new Locator.FilterOptions().setHasText("Developer")).click();
+	    page.locator("div").filter(new Locator.FilterOptions().setHasText(Pattern.compile("^English$"))).locator("a").click();
+	    page.getByRole(AriaRole.LISTITEM).filter(new Locator.FilterOptions().setHasText(Pattern.compile("^Spanish$"))).click();
+	    page.locator("a").filter(new Locator.FilterOptions().setHasText("Use application default")).first().click();
+	    page.getByRole(AriaRole.LISTITEM).filter(new Locator.FilterOptions().setHasText("(UTC-10:00) Hawaii")).click();
+	    page.locator("a").filter(new Locator.FilterOptions().setHasText("Use application default")).click();
+	    page.getByRole(AriaRole.LISTITEM).filter(new Locator.FilterOptions().setHasText("English (Canada)")).click();
+	    page.locator("a").filter(new Locator.FilterOptions().setHasText("Software Engineer")).click();
+	    page.getByRole(AriaRole.LISTITEM).filter(new Locator.FilterOptions().setHasText("VP Of Operation")).click();
+	    page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("Update")).click();
+	    page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("Spanish ")).click();
+	    page.getByRole(AriaRole.LINK, new Page.GetByRoleOptions().setName("English")).click();
+	    page.getByRole(AriaRole.LINK, new Page.GetByRoleOptions().setName("Administration")).click();
+	    page.locator(".user_management_action_outer_wrap > a:nth-child(3)").click();
+	    page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("Delete")).click();
+	    page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("")).click();
+	    page.getByRole(AriaRole.LINK, new Page.GetByRoleOptions().setName("Log out")).click();
+	  }
+
+}

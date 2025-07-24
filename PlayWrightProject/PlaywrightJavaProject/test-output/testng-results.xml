@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2025-07-24T17:07:51 IST" name="PlaywrightSuite" finished-at="2025-07-24T17:08:39 IST" duration-ms="48617">
+    <groups>
+    </groups>
+    <test started-at="2025-07-24T17:07:51 IST" name="BasicTests" finished-at="2025-07-24T17:08:39 IST" duration-ms="48617">
+      <class name="tests.LoginTest">
+        <test-method is-config="true" signature="setUp(java.lang.reflect.Method)[pri:0, instance:tests.LoginTest@7b2bbc3]" started-at="2025-07-24T17:08:12 IST" name="setUp" finished-at="2025-07-24T17:08:13 IST" duration-ms="985" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void tests.LoginTest.test()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="test()[pri:0, instance:tests.LoginTest@7b2bbc3]" started-at="2025-07-24T17:08:13 IST" name="test" finished-at="2025-07-24T17:08:24 IST" duration-ms="11613" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.LoginTest@7b2bbc3]" started-at="2025-07-24T17:08:24 IST" name="tearDown" finished-at="2025-07-24T17:08:25 IST" duration-ms="292" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=test status=SUCCESS method=LoginTest.test()[pri:0, instance:tests.LoginTest@7b2bbc3] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- tests.LoginTest -->
+      <class name="tests.UpdateUserTest">
+        <test-method is-config="true" signature="setUp(java.lang.reflect.Method)[pri:0, instance:tests.UpdateUserTest@a1153bc]" started-at="2025-07-24T17:08:25 IST" name="setUp" finished-at="2025-07-24T17:08:26 IST" duration-ms="996" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void tests.UpdateUserTest.test()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="test()[pri:0, instance:tests.UpdateUserTest@a1153bc]" started-at="2025-07-24T17:08:26 IST" name="test" finished-at="2025-07-24T17:08:39 IST" duration-ms="13165" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.UpdateUserTest@a1153bc]" started-at="2025-07-24T17:08:39 IST" name="tearDown" finished-at="2025-07-24T17:08:39 IST" duration-ms="291" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=test status=SUCCESS method=UpdateUserTest.test()[pri:0, instance:tests.UpdateUserTest@a1153bc] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- tests.UpdateUserTest -->
+      <class name="tests.RegisterUserTest">
+        <test-method is-config="true" signature="setUp(java.lang.reflect.Method)[pri:0, instance:tests.RegisterUserTest@10e31a9a]" started-at="2025-07-24T17:07:51 IST" name="setUp" finished-at="2025-07-24T17:07:59 IST" duration-ms="8269" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void tests.RegisterUserTest.test()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="test()[pri:0, instance:tests.RegisterUserTest@10e31a9a]" started-at="2025-07-24T17:07:59 IST" name="test" finished-at="2025-07-24T17:08:11 IST" duration-ms="12406" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.RegisterUserTest@10e31a9a]" started-at="2025-07-24T17:08:11 IST" name="tearDown" finished-at="2025-07-24T17:08:12 IST" duration-ms="555" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=test status=SUCCESS method=RegisterUserTest.test()[pri:0, instance:tests.RegisterUserTest@10e31a9a] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- tests.RegisterUserTest -->
+    </test> <!-- BasicTests -->
+  </suite> <!-- PlaywrightSuite -->
+</testng-results>

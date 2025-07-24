@@ -1,0 +1,33 @@
+package tests;
+
+import org.testng.annotations.Test;
+
+import com.microsoft.playwright.Page;
+import com.microsoft.playwright.options.AriaRole;
+
+import base.BaseTest;
+
+public class UpdateUserTest extends BaseTest {
+	
+	  @Test
+	  public void test() {
+	    page.navigate("https://parabank.parasoft.com/parabank/index.htm");
+	    page.locator("input[name=\"username\"]").click();
+	    page.locator("input[name=\"username\"]").fill("sam_smith234");
+	    page.locator("input[name=\"password\"]").click();
+	    page.locator("input[name=\"password\"]").fill("PassworD.181");
+	    page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("Log In")).click();
+	    page.getByRole(AriaRole.LINK, new Page.GetByRoleOptions().setName("Update Contact Info")).click();
+	    page.locator("[id=\"customer.lastName\"]").click();
+	    page.locator("[id=\"customer.lastName\"]").fill("Prasanna");
+	    page.locator("[id=\"customer.address.street\"]").click();
+	    page.locator("[id=\"customer.address.street\"]").fill("100G,kudamaduwa road, kesbewa");
+	    page.locator("[id=\"customer.address.zipCode\"]").click();
+	    page.locator("[id=\"customer.address.zipCode\"]").fill("10500");
+	    page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("Update Profile")).click();
+	    page.getByRole(AriaRole.LINK, new Page.GetByRoleOptions().setName("Accounts Overview")).click();
+	    page.getByRole(AriaRole.LINK, new Page.GetByRoleOptions().setName("Log Out")).click();
+	    
+	  }
+
+}

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="com.microsoft.playwright.BrowserType.LaunchOptions"/>
+    <fullyQualifiedTypeName name="com.microsoft.playwright.BrowserType"/>
+    <fullyQualifiedTypeName name="java.awt.print.Pageable"/>
+    <fullyQualifiedTypeName name="com.microsoft.playwright.Browser"/>
+    <fullyQualifiedTypeName name="com.microsoft.playwright.Page"/>
+    <fullyQualifiedTypeName name="com.microsoft.playwright.Playwright"/>
+    <fullyQualifiedTypeName name="org.testng.annotations.BeforeMethod"/>
+    <fullyQualifiedTypeName name="java.security.PublicKey"/>
+    <fullyQualifiedTypeName name="org.testng.annotations.Test"/>
+    <fullyQualifiedTypeName name="com.microsoft.playwright.Locator"/>
+    <fullyQualifiedTypeName name="base.BaseTest"/>
+    <fullyQualifiedTypeName name="pages.LoginPage"/>
+    <fullyQualifiedTypeName name="java.lang.String"/>
+    <fullyQualifiedTypeName name="com.microsoft.playwright.BrowserContext"/>
+    <fullyQualifiedTypeName name="java.awt.image.renderable.ContextualRenderedImageFactory"/>
+</qualifiedTypeNameHistroy>

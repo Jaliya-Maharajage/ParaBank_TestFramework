@@ -1,0 +1,28 @@
+package tests;
+
+import java.awt.print.Pageable;
+
+import com.microsoft.playwright.Browser;
+import com.microsoft.playwright.BrowserType;
+import com.microsoft.playwright.Page;
+import com.microsoft.playwright.Playwright;
+
+public class FirstTest {
+	
+	public static void main(String[] args) {
+		
+		try(Playwright playwright =Playwright.create()){
+			
+			Browser browser=playwright.chromium().launch(new BrowserType.LaunchOptions().setHeadless(false));
+			Page page=browser.newPage();
+			page.navigate("https://parabank.parasoft.com/parabank/index.htm");
+			
+			System.out.println("The Page Title is:--"+page.title());
+			browser.wait(10000);
+			browser.close();
+			
+			
+		}
+	}
+
+}
