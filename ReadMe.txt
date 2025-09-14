@@ -35,7 +35,7 @@ Check for Assertions Such as 'Cookies Accept'.
 'DELETE USER' function is not available here in this web site. But can be easily implemented.
 
 Outputs-
-Generate 'ExtentReport.html' file about Test suite results. Where you can see PASSED and FAILED Test Scenarios. 
+Generate 'ExtentReport.html' file about Test suite results. Where you can see PASSED and FAILED Test Scenarios. also screenshots for failed scenario pages are available in test-output> screenshots folder.
 Also can check 'index.htm' for Playwright default report generated file.
 
 Hope this Will helped you to setup project.
